@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     overflow: hidden;
     background-image: url(../'background.jpg');
+    background-repeat: no-repeat;
 }
 body {
     min-height: 100vh;
