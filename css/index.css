@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url(../background.jpg);
+    background-image: url(../'background.jpg');
 }
 body {
     min-height: 100vh;
