@@ -5,10 +5,6 @@ This repo is based on the work of two other repo :
 - [PSFree from Kame repo](https://github.com/kmeps4/PSFree) 
 - [PSFree from Al-Azif repo](https://github.com/Al-Azif/psfree-lapse)
 
-<h1 style="color:red;text-align:center;">⚠️PLEASE DO NOT REPORT ERRORS FROM THIS REPO TO THEIR REPOS⚠️</h1>
-
-<h2 style="color:red;text-align:center;">⚠️PLEASE TEST OTHER REPOS BEFORE OPENING A ISSUE ON THIS REPO⚠️</h2>
-
 ___
 
 ### Know issues
@@ -30,7 +26,7 @@ This repo only support PS4 for now.
 # How to run
 
 ## Website
-[Click Here](https://nazky.github.io/PSFree/)
+[Click Here](https://leomichel-10.github.io/psfree/)
 
 ## Locally
 
