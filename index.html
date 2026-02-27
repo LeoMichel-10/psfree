@@ -32,11 +32,12 @@ overflow: hidden;
 }
  .content {
   width:90%;
-  height:15%;
+  height:13%;
   margin-left:3.5%;
   background:rgba(0,0,0,0.5);
   color:white;
   margin-top:0%;
+  margin-bottom: 3%;
   font-size:25px;
   text-align:center;
   border-radius:30px;
@@ -53,7 +54,7 @@ overflow: hidden;
   margin-bottom:10px;
  }
  .text1 {
-  color:rgb(27, 245, 245);
+  color:#E6D112;
   font-weight: bold;
  }
  .text {
@@ -120,7 +121,6 @@ opacity:0.7;
 #progress {
  font-weight:bold;
  text-shadow: 4px 4px 4px black;
-
  font-size:17px;
 }
 .pointer {cursor: pointer;}
@@ -137,6 +137,13 @@ h2{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+h3{
+    font-size:25px;
+    text-align:center;
+    text-shadow: 4px 4px 4px black;
+    color:white;
 }
 
 .TextCaption{
@@ -165,6 +172,10 @@ transform: scale(1.1)
     display: block;
 }
 
+.img{
+    width: 10%;
+}
+
     </style>
 <meta charset="utf-8">
 <title>Jailbreak CopyStation - PSFree✔ PS4</title>
@@ -173,10 +184,9 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
  </head>
 <body style='background-color:#1A1920'>
-<br>
-<h1>Jailbreak CopyStation</h1>
+<h1 style="margin-top: 3%;" >Jailbreak CopyStation</h1>
 <h2>PSFree✔ PS4</h2>
-<h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Activando Webkit Exploit, Espere ...</h1><br>
+<h3 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Activando Webkit Exploit, Espere ...</h3><br>
 <div style="text-align:center;display:none">
 <button id="button-Payload" onMouseOver="progress.innerHTML='GoldHen v2.4 Beta 18 9 by LeoMichel-10 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" type="button" onclick="goldhen()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:#CEC52A' > GoldHenV2.4b18.9</button>
 </div>
@@ -184,12 +194,12 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <div id=all class="content" >
  	    <div class="text" >
  	        <br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Designed by :</span >&nbsp;&nbsp; <span style="font-size:32px;font-weight: bold;text-shadow: 4px 4px 4px black;" class="hue" >LeoMichel-10</span>
- 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
+ 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Karo, Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
 	    </div>
 </div>
 
     <img class="gif" src="./loader.gif" alt="">
-    <img src="./CopyStation_icon.png" alt="">
+    <img class="img" src="./CopyStation_icon.png" alt="">
 
 </body>
 <script src="./exploit.js"></script>
