@@ -33,6 +33,13 @@ h2{
     text-shadow: 0.1em 0.1em 0.2em black;
 }
 
+h3{
+    font-size:25px;
+    text-align:center;
+    text-shadow: 4px 4px 4px black;
+    color:white;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -48,11 +55,12 @@ h2{
 }
  .content {
   width:90%;
-  height:15%;
+  height:13%;
   margin-left:3.5%;
   background:rgba(0,0,0,0.5);
   color:white;
   margin-top:0%;
+  margin-bottom: 3%;
   font-size:25px;
   text-align:center;
   border-radius:30px;
@@ -69,7 +77,7 @@ h2{
   margin-bottom:10px;
  }
  .text1 {
-  color:rgb(27, 245, 245);
+  color:#E6D112;
   font-weight: bold;
  }
  .text {
@@ -188,18 +196,16 @@ function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout
 function DisplayCacheProgress(){setTimeout(function(){window.progress.innerHTML="Cache Instalado Correctamente ✔ !!";},1500);setTimeout(function(){window.progress.innerHTML="Reinicie este sitio !!";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <body style='background-color:#1A1920'>
-<br>
-<h1>Jailbreak CopyStation</h1>
+<h1 style="margin-top: 3%;" >Jailbreak CopyStation</h1>
 <h2>PSFree✔ PS4</h2>
-<h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Almacenando en cache, Espere ...</h1>
+<h3 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Almacenando en cache, Espere ...</h3>
 
 <div class="content" >
  	    <div class="text" >
- 	         	        <br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Designed by :</span >&nbsp;&nbsp; <span style="font-size:32px;font-weight: bold;text-shadow: 4px 4px 4px black;" class="hue" >LeoMichel-10</span>
- 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
+ 	        <br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Designed by :</span >&nbsp;&nbsp; <span style="font-size:32px;font-weight: bold;text-shadow: 4px 4px 4px black;" class="hue" >LeoMichel-10</span>
+ 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="text1" >Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Karo, Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
 	    </div>
 </div>
 </body>
 
 </html>
-
