@@ -1,89 +1,29 @@
 <html manifest="Cache.manifest">
 <head>
+<title>Jailbreak CopyStation - PSFree✔ PS4</title>
 <style>
-    html, body {
+
+html, body {
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d2d5f 50%, #1a1a3e 75%, #0f0f23 100%);
             background-attachment: fixed;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #ffffff;
             position: relative;
             overflow-x: hidden;
-        }
+            text-align: center;
+}
 
-        .bg-decoration {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .floating-shape {
-            position: absolute;
-            opacity: 0.08;
-            animation: float 25s infinite linear;
-        }
-        /* circulo izquierda */
-        .shape-1 {
-            width: 190px;
-            height: 190px;
-            background: linear-gradient(45deg, #8b5cf6, #ec4899);
-            border-radius: 50%;
-            top: 15%;
-            left: 8%;
-            animation-delay: 5s;
-        }
-        /* cuadrado derecha */
-        .shape-2 {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            border-radius: 30%;
-            top: 50%;
-            right: 12%;
-            animation-delay: -8s;
-        }
-        /* triangulo derecha */
-        .shape-3 {
-            width: 180px;
-            height: 180px;
-            background: linear-gradient(45deg, #1BFACC, #56FFFF);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            top: 10%;
-            right: 20%;
-            animation-delay: -15s;
-        }
-        /* circulo derecha */
-        .shape-4 {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #8b5cf6, #ec4899);
-            border-radius: 50%;
-            top: 80%;
-            right: 8%;
-            animation-delay: 0s;
-        }
-        /* cuadrado izquierda */
-        .shape-5 {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            border-radius: 30%;
-            top: 75%;
-            left: 12%;
-            animation-delay: -12s;
-        }
-        /* triangulo izquierda */
-        .shape-6 {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(45deg, #1BFACC, #56FFFF);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            top: 50%;
-            left: 4%;
-            animation-delay: -10s;
-        }
+h1{
+    font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 5%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-align: center;
+}
 
 .container {
             position: relative;
@@ -92,26 +32,43 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+}
+
+h2{
+    font-size: 1rem;
+    color: #b6b8ff;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.status-container {
+    background: rgba(30, 41, 59, 0.116);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 55px rgba(99, 102, 241, 0.2);
+}
+
+        .notification {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            font-family: 'Courier New', monospace;
         }
 
-        .header-section {
-            text-align: center;
-            margin-bottom: 0.3rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: gold;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .version-info {
-            font-size: 1rem;
-            color: #b6b8ff;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+h3{
+    font-size:25px;
+    text-align:center;
+    color:white;
+}
 
 .modal {
   display: none; /* Hidden by default */
@@ -126,7 +83,21 @@
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+ .content {
+  width:90%;
+  height:13%;
+  margin-left:3.5%;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  margin-top:0%;
+  margin-bottom: 3%;
+  font-size:25px;
+  text-align:center;
+  border-radius:30px;
+  padding:20px;
+  line-height:12px;
+  position:absolute;bottom:0px;
+ }
  .title {
   font-size:40px;
   margin:0;
@@ -135,7 +106,31 @@
   font-weight:bolder;
   margin-bottom:10px;
  }
-
+ .text1 {
+  color:#E6D112;
+  font-weight: bold;
+ }
+ .text {
+  padding-bottom:50px;
+ }
+  .back {
+   font-size:25px;
+   margin-top:10px;
+   display:block;
+   line-height:55px;
+   width:20%;
+   text-decoration:none;
+   height:50px;
+   background:white;
+   color:black;
+   border-radius:15px;
+  }
+  .back:hover{
+   border:2px solid white;
+   background:transparent;
+   box-sizing:border-box;
+   color:white;
+  }
  #psip {
   text-align: center;
   margin-left: 38%;
@@ -179,26 +174,12 @@ margin:0;
 opacity:0.7;
 }
 
+#progress {
+ font-weight:bold;
+ font-size:17px;
+}
+
 .pointer {cursor: pointer;}
-
-h1{
-    font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 5%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-            text-align: center;
-}
-
-h2{
-    color: #E6D112;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 0.1em 0.1em 0.2em black;
-}
 
 .TextCaption{
 display: block;
@@ -206,29 +187,6 @@ display: block;
     color: #fff;
     text-decoration: none;
 }
-
-.status-container {
-    background: rgba(30, 41, 59, 0.116);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.3rem;
-    text-align: center;
-    max-width: 800px;
-    width: 100%;
-    box-shadow: 0 4px 55px rgba(99, 102, 241, 0.2);
-}
-
-        .notification {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 12px;
-            max-width: 800px;
-            width: 100%;
-            font-family: 'Courier New', monospace;
-        }
 
 .loader {
   width: fit-content;
@@ -279,7 +237,7 @@ display: block;
   100% { background-position: 0 0; }
 }
 
-        .credits {
+ .credits {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -313,47 +271,63 @@ display: block;
             color: #ff8fc7;
         }
 
-    </style>
+</style>
 <meta charset="utf-8">
-<title>Jailbreak CopyStation - PSFree✔ PS4</title>
-<script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-</script>
- </head>
+</head>
 <body>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){
+  Percent = (Math.round(e.loaded / e.total * 100));
+  setTimeout(function(){
+    window.progress.innerHTML = "Instalando Offline Cache: " + Percent + "%";
+  },500)
+}
 
-    <!-- Este es un comentario        --> 
+function DisplayCacheProgress(){
+  setTimeout(function(){
+    window.progress.innerHTML = "Cache Instalado Correctamente ✔ !!";
 
-    <div class="bg-decoration">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
+    // Cambiar estado del loader
+    document.querySelector('.loader').classList.add('successful');
 
-        <div class="floating-shape shape-4"></div>
-        <div class="floating-shape shape-5"></div>
-        <div class="floating-shape shape-6"></div>
-    </div>
+    // Eliminar loader2
+    const loader2 = document.querySelector('.loader2');
+    if(loader2){
+      loader2.remove();
+    }
 
+  },1500);
 
+  setTimeout(function(){
+    window.progress.innerHTML = "Reinicie este sitio !!";
+  },3500);
+}
 
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<body style='background-color:#1A1920'>
 <h1 style="margin-top: 2%;" >Jailbreak CopyStation</h1>
-<div class="container">
-        <div class="header-section">
-            <p class="version-info">PSFree✔ PS4</p>
-            <p class="subtitle">GoldHEN v2.4b18.10</p>
-        </div>
 
-<div class="status-container">
+<div class="container">
+
+    <h2>PSFree✔ PS4</h2>
+
+    <div class="status-container">
             <div id="notify" class="notification">
                 <div id="log">
-                    <h3 id=progress style='font-size:25px;text-align:center;'>Activando Webkit Exploit, Espere ...</h3>
+                    <h3 id=progress style='font-size:25px;text-align:center'>Almacenando en cache, Espere ...</h3>
                 </div>
             </div>
-            <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
-</div>
+            <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Caching Jailbreak</div>
+    </div>
 
-<div class="loader"></div>
-<div class="loader2"></div>
+    <div class="loader"></div>
+    <div class="loader2"></div>
+
+</div>
 
 <!--
 
@@ -372,13 +346,11 @@ setTimeout(() => {
 
 </script>
 
--->
 
-<!-- Este es un comentario -->
 
-    <img class="img" src="./CopyStation_icon.png" alt="">
+ Este es un comentario -->
 
-    <div class="credits">
+<div class="credits">
         
         <div class="credits-line">
             <span class="credit-label">Author:</span>
@@ -387,5 +359,5 @@ setTimeout(() => {
     </div>
 
 </body>
-<script src="./exploit.js"></script>
+
 </html>
