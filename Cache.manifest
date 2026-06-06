@@ -11,9 +11,7 @@ CACHE:
 exploit.js
 index.html
 payload.bin
-background.jpg
 CopyStation_icon.png
-loader.gif
 
 NETWORK: 
 * 
