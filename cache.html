@@ -25,17 +25,48 @@ h1{
             text-align: center;
 }
 
+.container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+}
+
 h2{
     font-size: 1rem;
     color: #b6b8ff;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 60px;
 }
+
+.status-container {
+    background: rgba(30, 41, 59, 0.116);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 55px rgba(99, 102, 241, 0.2);
+}
+
+        .notification {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+        }
 
 h3{
     font-size:25px;
     text-align:center;
-    text-shadow: 4px 4px 4px black;
     color:white;
 }
 
@@ -145,10 +176,9 @@ opacity:0.7;
 
 #progress {
  font-weight:bold;
- text-shadow: 4px 4px 4px black;
-
  font-size:17px;
 }
+
 .pointer {cursor: pointer;}
 
 .TextCaption{
@@ -156,6 +186,55 @@ display: block;
     font-size: 20px;
     color: #fff;
     text-decoration: none;
+}
+
+.loader {
+  width: fit-content;
+  font-size: 40px;
+  line-height: 1.5;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ec4899;
+  -webkit-text-stroke: 1px #6366f1;
+  margin-top: 20px;
+}
+.loader:before {
+  content: "Loading";
+}
+
+
+.loader2 {
+  height: 8px;
+  width: 180px;
+  --c:no-repeat linear-gradient(#6100ee 0 0);
+  background: var(--c),var(--c),#ec4899;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+.loader.successful {
+  color: #2ea35983;
+  -webkit-text-stroke: 1px #22c55e; /* verde éxito */
+  background: none;
+  margin-bottom: 27px;
+}
+
+.loader.successful:before {
+  content: "Successful!!";
+}
+
+@keyframes waveFill {
+  0%   { background-position: 0 100%; }
+  100% { background-position: 0 0; }
 }
 
  .credits {
@@ -198,13 +277,78 @@ display: block;
 <body>
 <script>
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.progress.innerHTML="Instalando Offline Cache: " + Percent + "%";},500)}
-function DisplayCacheProgress(){setTimeout(function(){window.progress.innerHTML="Cache Instalado Correctamente ✔ !!";},1500);setTimeout(function(){window.progress.innerHTML="Reinicie este sitio !!";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){
+  Percent = (Math.round(e.loaded / e.total * 100));
+  setTimeout(function(){
+    window.progress.innerHTML = "Instalando Offline Cache: " + Percent + "%";
+  },500)
+}
+
+function DisplayCacheProgress(){
+  setTimeout(function(){
+    window.progress.innerHTML = "Cache Instalado Correctamente ✔ !!";
+
+    // Cambiar estado del loader
+    document.querySelector('.loader').classList.add('successful');
+
+    // Eliminar loader2
+    const loader2 = document.querySelector('.loader2');
+    if(loader2){
+      loader2.remove();
+    }
+
+  },1500);
+
+  setTimeout(function(){
+    window.progress.innerHTML = "Reinicie este sitio !!";
+  },3500);
+}
+
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <body style='background-color:#1A1920'>
 <h1 style="margin-top: 2%;" >Jailbreak CopyStation</h1>
-<h2>PSFree✔ PS4</h2>
-<h3 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Almacenando en cache, Espere ...</h3>
+
+<div class="container">
+
+    <h2>PSFree✔ PS4</h2>
+
+    <div class="status-container">
+            <div id="notify" class="notification">
+                <div id="log">
+                    <h3 id=progress style='font-size:25px;text-align:center'>Almacenando en cache, Espere ...</h3>
+                </div>
+            </div>
+            <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Caching Jailbreak</div>
+    </div>
+
+    <div class="loader"></div>
+    <div class="loader2"></div>
+
+</div>
+
+<!--
+
+<script>
+    // Simulación de evento (puedes reemplazarlo con tu lógica real)
+setTimeout(() => {
+  const loader = document.querySelector('.loader');
+  const loader2 = document.querySelector('.loader2');
+
+  // Cambiar a estado "successful"
+  loader.classList.add('successful');
+
+  // Quitar loader2
+  if(loader2) loader2.remove();
+}, 3000); // después de 3 segundos
+
+</script>
+
+
+
+ Este es un comentario -->
 
 <div class="credits">
         
