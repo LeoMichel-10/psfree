@@ -275,9 +275,12 @@ h4{
   100% { background-position: 0 0; }
 }
 
-.img{
+img {
+    width: 130px;
+    height: auto;
     margin-top: 1%;
 }
+
 
         .credits {
             position: fixed;
