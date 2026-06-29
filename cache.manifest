@@ -1,6 +1,14 @@
 CACHE MANIFEST 
 
 CACHE:
+module/chain.mjs
+module/constants.mjs
+module/int64.mjs
+module/mem.mjs
+module/memtools.mjs
+module/offset.mjs
+module/rw.mjs
+module/utils.mjs
 700.bin
 750.bin
 800.bin
@@ -21,3 +29,11 @@ index2.html
 index3.html
 index4.html
 style.css
+
+NETWORK: 
+* 
+
+SETTINGS:  
+prefer-online:  
+
+# 2025-11.27 20:22:30
