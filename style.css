@@ -1,0 +1,316 @@
+html, body {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d2d5f 50%, #1a1a3e 75%, #0f0f23 100%);
+    background-attachment: fixed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.bg-decoration {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+.floating-shape {
+            position: absolute;
+            opacity: 0.08;
+            animation: float 25s infinite linear;
+        }
+        /* circulo izquierda */
+        .shape-1 {
+            width: 190px;
+            height: 190px;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            border-radius: 50%;
+            top: 15%;
+            left: 8%;
+            animation-delay: 5s;
+        }
+        /* cuadrado derecha */
+        .shape-2 {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 30%;
+            top: 50%;
+            right: 12%;
+            animation-delay: -8s;
+        }
+        /* triangulo derecha */
+        .shape-3 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(45deg, #1BFACC, #56FFFF);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            top: 10%;
+            right: 20%;
+            animation-delay: -15s;
+        }
+        /* circulo derecha */
+        .shape-4 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            border-radius: 50%;
+            top: 80%;
+            right: 8%;
+            animation-delay: 0s;
+        }
+        /* cuadrado izquierda */
+        .shape-5 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 30%;
+            top: 75%;
+            left: 12%;
+            animation-delay: -12s;
+        }
+        /* triangulo izquierda */
+        .shape-6 {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(45deg, #1BFACC, #56FFFF);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            top: 50%;
+            left: 4%;
+            animation-delay: -10s;
+        }
+
+h1{
+    font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 5%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-align: center;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: gold;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .version-info {
+            font-size: 1rem;
+            color: #b6b8ff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+h2{
+    color: #E6D112;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+h4{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 15px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.status-container {
+    background: rgba(30, 41, 59, 0.116);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 55px rgba(99, 102, 241, 0.2);
+}
+
+        .notification {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            max-width: 800px;
+            padding-bottom: 20px;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+        }
+
+.btn {
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: rgba(30, 41, 59, 0.4);
+    color: #e2e8f0;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+    width: 230px;
+    height: 50px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 5%, #ec4899 100%);
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+
+/* ESTILO DE CONTAINER DE EXPLOIT */
+.status-container {
+    background: rgba(30, 41, 59, 0.116);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 55px rgba(99, 102, 241, 0.2);
+}
+
+        .notification {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+        }
+
+.info{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.loader {
+  width: fit-content;
+  font-size: 40px;
+  line-height: 1.5;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ec4899;
+  -webkit-text-stroke: 1px #6366f1;
+  margin-top: 20px;
+}
+.loader:before {
+  content: "Loading";
+}
+
+
+.loader2 {
+  height: 8px;
+  width: 180px;
+  --c:no-repeat linear-gradient(#6100ee 0 0);
+  background: var(--c),var(--c),#ec4899;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+.loader.successful {
+  color: #2ea35983;
+  -webkit-text-stroke: 1px #22c55e; /* verde éxito */
+  background: none;
+  margin-bottom: 27px;
+}
+
+.loader.successful:before {
+  content: "Successful!!";
+}
+
+@keyframes waveFill {
+  0%   { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+
+.img{
+    margin-top: 2%;
+}
+
+        .credits {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d2d5f 50%, #1a1a3e 75%, #0f0f23 100%);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            z-index: 10;
+        }
+
+        .credits-line {
+            margin: 0.25rem 0;
+        }
+
+        .credit-label {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .telegram-link {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .telegram-link:hover {
+            color: #ff8fc7;
+        }
