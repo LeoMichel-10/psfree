@@ -26,7 +26,11 @@
         <div class="floating-shape shape-6"></div>
     </div>
 
+    <div class="fw-display">FW - <span id="PS4fw"></span></div>
+    <a href="payloads.html"><button class="btn2"> Payloads </button></a>
+
     <h1 style="margin-top: 1%;" >Jailbreak CopyStation</h1>
+
     <div class="container">
         <div class="header-section">
             <p class="version-info">PSFree✔ PS4</p>
@@ -56,6 +60,36 @@
             <a class="telegram-link">LeoMichel-10</a>
         </div>
     </div>
+
+<script>
+        // Firmware detection
+        UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72 (") + 28, navigator.userAgent.indexOf(") Apple"));
+        // 9.xx
+        if (UA == "layStation 4/9.00") UA = "9.00";
+        if (UA == "layStation 4/9.03") UA = "9.03";
+        if (UA == "layStation 4/9.04") UA = "9.04";
+        if (UA == "layStation 4/9.50") UA = "9.50";
+        if (UA == "layStation 4/9.51") UA = "9.51";
+        if (UA == "layStation 4/9.60") UA = "9.60";
+        if (UA == "layStation 4/99.99") UA = "99.99";
+
+        var supportedFW = ["9.00", "9.03", "9.04", "9.50", "9.51", "9.60", "99.99"];
+        if (!supportedFW.includes(UA))
+            alert("This Is For PS4 FW 9.xx Only!");
+        document.getElementById("PS4fw").innerHTML = "" + UA + "";
+
+        // Statistics initialization
+        if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
+        if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
+
+        // Update counters on page load
+        if (document.getElementById("passCounter")) {
+            document.getElementById("passCounter").innerHTML = localStorage.passcount;
+        }
+        if (document.getElementById("failCounter")) {
+            document.getElementById("failCounter").innerHTML = localStorage.failcount;
+        }
+</script>
 
 </body>
 </html>
