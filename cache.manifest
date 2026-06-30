@@ -9,6 +9,12 @@ module/memtools.mjs
 module/offset.mjs
 module/rw.mjs
 module/utils.mjs
+payloads/app2usb.bin
+payloads/backup.bin
+payloads/disable-updates.bin
+payloads/enable-updates.bin
+payloads/ps4debug.bin
+payloads/restore.bin
 700.bin
 750.bin
 800.bin
@@ -28,6 +34,8 @@ index1.html
 index2.html
 index3.html
 index4.html
+payloads.html
+payloads.js
 style.css
 
 NETWORK: 
