@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" manifest="./cache.manifest">
+<head>
+    <script>
+        function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.title="Instalando Cache Offline: " + Percent + "%";}
+        function DisplayCacheProgress(){setTimeout(function(){;document.title="Cache Offline Instalado Correctamente ✔";},1000);setTimeout(function(){window.location.href = document.referrer;},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="payloads.js"></script>
+    <title>Payloads - CopyStation - PSFree✔</title>
+</head>
+
+<body>
+    
+    <!-- Este es un comentario        --> 
+
+    <div class="bg-decoration">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+        <div class="floating-shape shape-6"></div>
+    </div>
+
+    <div class="fw-display">FW - <span id="PS4fw"></span></div>
+    <a href="index.html"><button class="btn2_2"> Jailbreak </button></a>
+
+    <h1 style="margin-top: 1%;" >Jailbreak CopyStation</h1>
+
+    <div class="container">
+        <div class="header-section">
+            <p class="version-info">PSFree✔ PS4</p>
+            <p class="subtitle2">Payloads</p>
+            <h3>Seleccione el Payload que desea ejecutar:</h3>
+        </div>
+        <div class="status-container">
+            <div id="notify" class="notification">
+                <div id="log">
+                    <button onclick="load_backup()" onMouseOver="document.getElementById('msgs2').innerHTML='Backup - Backup system data to USB'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Launch Payloads'" class="btn2_1"> BACKUP </button>
+                    <button onclick="load_restore()" onMouseOver="document.getElementById('msgs2').innerHTML='Restore - Restore system data from USB'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Jailbreak'" class="btn2_1"> RESTORE </button> 
+                    <button onclick="load_app2usb()" onMouseOver="document.getElementById('msgs2').innerHTML='App2USB - Transfer applications to USB storage'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Jailbreak'" class="btn2_1"> APP2USB </button> 
+                    <button onclick="load_disable_updates()" onMouseOver="document.getElementById('msgs2').innerHTML='Disable Updates - Block system updates'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Jailbreak'" class="btn2_1"> DISABLE UPDATES </button> 
+                    <button onclick="load_enable_updates()" onMouseOver="document.getElementById('msgs2').innerHTML='Enable Updates - Allow system updates'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Jailbreak'" class="btn2_1"> ENABLE UPDATES </button> 
+                    <button onclick="load_ps4debug()" onMouseOver="document.getElementById('msgs2').innerHTML='PS4Debug - Enable debugging features'" onmouseout="document.getElementById('msgs2').innerHTML='Ready to Jailbreak'" class="btn2_1"> PS4DEBUG </button> 
+                </div>
+            </div>
+            <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Ready to Launch Payloads</div>
+        </div>
+    </div>
+
+<div><img src="./CopyStation_icon.png" alt=""></div>    
+
+    <div class="credits"> 
+        <div class="credits-line">
+            <span class="credit-label">Author:</span>
+            <a class="telegram-link">LeoMichel-10</a>
+        </div>
+    </div>
+
+    <script>
+        // Firmware detection
+        UA = navigator.userAgent.substring(navigator.userAgent.indexOf("6.72 (") + 28, navigator.userAgent.indexOf(") Apple"));
+        // 9.xx
+        if (UA == "layStation 4/9.00") UA = "9.00";
+        if (UA == "layStation 4/9.03") UA = "9.03";
+        if (UA == "layStation 4/9.04") UA = "9.04";
+        if (UA == "layStation 4/9.50") UA = "9.50";
+        if (UA == "layStation 4/9.51") UA = "9.51";
+        if (UA == "layStation 4/9.60") UA = "9.60";
+        if (UA == "layStation 4/99.99") UA = "99.99";
+
+        var supportedFW = ["9.00", "9.03", "9.04", "9.50", "9.51", "9.60", "99.99"];
+        if (!supportedFW.includes(UA))
+            alert("This Is For PS4 FW 9.xx Only!");
+        document.getElementById("PS4fw").innerHTML = "" + UA + "";
+
+        // Statistics initialization
+        if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
+        if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
+
+        // Update counters on page load
+        if (document.getElementById("passCounter")) {
+            document.getElementById("passCounter").innerHTML = localStorage.passcount;
+        }
+        if (document.getElementById("failCounter")) {
+            document.getElementById("failCounter").innerHTML = localStorage.failcount;
+        }
+    </script>
+
+</body>
+</html>
