@@ -48,7 +48,7 @@
                 <button class="btn" onclick="loadExploit('exploit4.js')"> GoldHen 2.4b18.10 </button> 
             </div>
         </div>
-        <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
+        <div class="jailbreak-status" id="progress" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
     </div>
 </div>
 
@@ -65,7 +65,7 @@ function loadExploit(file) {
     document.body.appendChild(script);
 
     // Opcional: mostrar mensaje de estado
-    document.getElementById("msgs2").textContent = "Ejecutando " + file + " ...";
+    document.getElementById("progress").textContent = "Ejecutando " + file + " ...";
 }
 </script>
 
