@@ -212,6 +212,21 @@ h4{
     transform: translateY(-4px);
 }
 
+.btn:disabled {
+    background-color: #777;   /* color base cuando está deshabilitado */
+    color: #ccc;              /* texto más apagado */
+    cursor: not-allowed;      /* cursor de prohibido */
+    opacity: 0.7;             /* un poco transparente */
+}
+
+/* Estilo cuando el cursor pasa por encima de un botón deshabilitado */
+.btn:disabled:hover {
+    background-color: #555;   /* cambia ligeramente el color */
+    color: #eee;              /* texto más claro */
+    cursor: not-allowed;      /* mantiene el cursor de prohibido */
+}
+
+
 .btn2 {
     font-size: 1rem;
     font-weight: 600;
