@@ -37,63 +37,39 @@
         <p class="subtitle">GoldHen</p>
         <h3>Seleccione el Exploit y GoldHen que desea ejecutar:</h3>
     </div>
-<div class="status-container">
-    <div id="notify" class="notification">
-        <div id="log">
-            <h4>CON USB</h4>
-            <!-- Botones deshabilitados al inicio -->
-            <button class="btn usb-btn" onclick="loadExploit('exploit1.js')" disabled> GoldHen 2.3 </button>
-            <button class="btn usb-btn" onclick="loadExploit('exploit2.js')" disabled> GoldHen 2.4b18.10 </button> 
-
-            <h4>SIN USB</h4>
-            <!-- Estos funcionan siempre -->
-            <button class="btn" onclick="loadExploit('exploit3.js')"> GoldHen 2.3 </button>
-            <button class="btn" onclick="loadExploit('exploit4.js')"> GoldHen 2.4b18.10 </button> 
+    <div class="status-container">
+        <div id="notify" class="notification">
+            <div id="log">
+                <h4>CON USB</h4>
+                <a href="./index1.html"><button class="btn"> GoldHen 2.3 </button></a>
+                <a href="./index2.html"><button class="btn"> GoldHen 2.4b18.10 </button></a>
+                <h4>SIN USB</h4>
+                <button class="btn" onclick="loadExploit('exploit3.js')"> GoldHen 2.3 </button>
+                <button class="btn" onclick="loadExploit('exploit4.js')"> GoldHen 2.4b18.10 </button> 
+            </div>
         </div>
-    </div>
-    <div class="jailbreak-status" id="progress" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
-    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #7172a1;">
-        <span>Successful attempts: <span id="passCounter" style="color: #10b981;">0</span></span>
-        <span style="margin-left: 1rem;">Unsuccessful attempts: <span id="failCounter" style="color: #ef4444;">0</span></span>
+        <div class="jailbreak-status" id="progress" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
+        <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #7172a1;">
+                <span>Successful attempts: <span id="passCounter" style="color: #10b981;">0</span></span>
+                <span style="margin-left: 1rem;">Unsuccessful attempts: <span id="failCounter" style="color: #ef4444;">0</span></span>
+            </div>
     </div>
 </div>
 
 <script>
-let exploitReady = false;
-
-function webkitExploit() {
-    // Aquí va tu código original del exploit base
-    exploitReady = true;
-    document.getElementById("progress").textContent = "Exploit base inicializado";
-
-    // Activamos los botones CON USB
-    enableUsbButtons();
-}
-
-function enableUsbButtons() {
-    document.querySelectorAll(".usb-btn").forEach(btn => {
-        btn.disabled = false;
-    });
-}
-
 function loadExploit(file) {
-    if (!exploitReady && file.includes("exploit1.js") || file.includes("exploit2.js")) {
-        document.getElementById("progress").textContent = "Esperando inicialización del exploit base...";
-        return;
-    }
-
-    // Elimina cualquier script previo
+    // Elimina cualquier script previo para evitar duplicados
     const oldScript = document.getElementById("exploit-script");
     if (oldScript) oldScript.remove();
 
-    // Crea el nuevo script dinámicamente
+    // Crea un nuevo script dinámicamente
     const script = document.createElement("script");
     script.src = file;
     script.id = "exploit-script";
-    script.onload = () => {
-        document.getElementById("progress").textContent = "Ejecutando " + file + " ...";
-    };
     document.body.appendChild(script);
+
+    // Opcional: mostrar mensaje de estado
+    document.getElementById("progress").textContent = "Ejecutando " + file + " ...";
 }
 </script>
 
@@ -106,9 +82,6 @@ function loadExploit(file) {
             <a class="telegram-link">LeoMichel-10</a>
         </div>
     </div>
-
-<script src="exploit1.js"></script>
-<script src="exploit2.js"></script>
 
 <script>
         // Firmware detection
