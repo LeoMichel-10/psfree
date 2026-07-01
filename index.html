@@ -32,25 +32,43 @@
     <h1 style="margin-top: 1%;" >Jailbreak CopyStation</h1>
 
     <div class="container">
-        <div class="header-section">
-            <p class="version-info">PSFree✔ PS4</p>
-            <p class="subtitle">GoldHen</p>
-            <h3>Seleccione el Exploit y GoldHen que desea ejecutar:</h3>
-        </div>
-        <div class="status-container">
-            <div id="notify" class="notification">
-                <div id="log">
-                    <h4>CON USB</h4>
-                    <a href="index1.html"><button class="btn"> GoldHen 2.3 </button></a>
-                    <a href="index2.html"><button class="btn"> GoldHen 2.4b18.10 </button></a> 
-                    <h4>SIN USB</h4>
-                    <a href="index3.html"><button class="btn"> GoldHen 2.3 </button></a>
-                    <a href="index4.html"><button class="btn"> GoldHen 2.4b18.10 </button></a> 
-                </div>
-            </div>
-            <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
-        </div>
+    <div class="header-section">
+        <p class="version-info">PSFree✔ PS4</p>
+        <p class="subtitle">GoldHen</p>
+        <h3>Seleccione el Exploit y GoldHen que desea ejecutar:</h3>
     </div>
+    <div class="status-container">
+        <div id="notify" class="notification">
+            <div id="log">
+                <h4>CON USB</h4>
+                <button class="btn" onclick="loadExploit('exploit1.js')"> GoldHen 2.3 </button>
+                <button class="btn" onclick="loadExploit('exploit2.js')"> GoldHen 2.4b18.10 </button> 
+                <h4>SIN USB</h4>
+                <button class="btn" onclick="loadExploit('exploit3.js')"> GoldHen 2.3 </button>
+                <button class="btn" onclick="loadExploit('exploit4.js')"> GoldHen 2.4b18.10 </button> 
+            </div>
+        </div>
+        <div class="jailbreak-status" id="msgs2" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
+    </div>
+</div>
+
+<script>
+function loadExploit(file) {
+    // Elimina cualquier script previo para evitar duplicados
+    const oldScript = document.getElementById("exploit-script");
+    if (oldScript) oldScript.remove();
+
+    // Crea un nuevo script dinámicamente
+    const script = document.createElement("script");
+    script.src = file;
+    script.id = "exploit-script";
+    document.body.appendChild(script);
+
+    // Opcional: mostrar mensaje de estado
+    document.getElementById("msgs2").textContent = "Ejecutando " + file + " ...";
+}
+</script>
+
 
 <div><img src="./CopyStation_icon.png" alt=""></div>    
 
