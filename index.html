@@ -12,7 +12,7 @@
     <title>Jailbreak CopyStation - PSFree✔ PS4 (9.00)</title>
 </head>
 
-<body onload="setTimeout(webkitExploit,500);">
+<body>
     
     <!-- Este es un comentario        --> 
 
@@ -49,10 +49,6 @@
             </div>
         </div>
         <div class="jailbreak-status" id="progress" style="color: #b6b8ff; margin-top: inherit;">Ready to Jailbreak</div>
-        <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #7172a1;">
-                <span>Successful attempts: <span id="passCounter" style="color: #10b981;">0</span></span>
-                <span style="margin-left: 1rem;">Unsuccessful attempts: <span id="failCounter" style="color: #ef4444;">0</span></span>
-            </div>
     </div>
 </div>
 
@@ -72,7 +68,6 @@ function loadExploit(file) {
     document.getElementById("progress").textContent = "Ejecutando " + file + " ...";
 }
 </script>
-
 
 <div><img src="./CopyStation_icon.png" alt=""></div>    
 
@@ -99,18 +94,6 @@ function loadExploit(file) {
         if (!supportedFW.includes(UA))
             alert("This Is For PS4 FW 9.xx Only!");
         document.getElementById("PS4fw").innerHTML = "" + UA + "";
-
-        // Statistics initialization
-        if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
-        if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
-
-        // Update counters on page load
-        if (document.getElementById("passCounter")) {
-            document.getElementById("passCounter").innerHTML = localStorage.passcount;
-        }
-        if (document.getElementById("failCounter")) {
-            document.getElementById("failCounter").innerHTML = localStorage.failcount;
-        }
 </script>
 
 </body>
