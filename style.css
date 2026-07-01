@@ -329,55 +329,6 @@ h4{
     unicode-bidi: isolate;
 }
 
-.loader {
-  width: fit-content;
-  font-size: 40px;
-  line-height: 1.5;
-  font-family: system-ui,sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ec4899;
-  -webkit-text-stroke: 1px #6366f1;
-  margin-top: 20px;
-}
-.loader:before {
-  content: "Loading";
-}
-
-
-.loader2 {
-  height: 8px;
-  width: 180px;
-  --c:no-repeat linear-gradient(#6100ee 0 0);
-  background: var(--c),var(--c),#ec4899;
-  background-size: 60% 100%;
-  animation: l16 3s infinite;
-  margin-top: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-@keyframes l16 {
-  0%   {background-position:-150% 0,-150% 0}
-  66%  {background-position: 250% 0,-150% 0}
-  100% {background-position: 250% 0, 250% 0}
-}
-
-.loader.successful {
-  color: #2ea35983;
-  -webkit-text-stroke: 1px #22c55e; /* verde éxito */
-  background: none;
-  margin-bottom: 27px;
-}
-
-.loader.successful:before {
-  content: "Successful!!";
-}
-
-@keyframes waveFill {
-  0%   { background-position: 0 100%; }
-  100% { background-position: 0 0; }
-}
-
 img {
     width: 130px;
     height: auto;
